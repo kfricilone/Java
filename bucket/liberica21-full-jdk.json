@@ -1,25 +1,25 @@
 {
-    "description": "BellSoft Liberica is a 100% open-source Java 17 implementation",
+    "description": "BellSoft Liberica is a 100% open-source Java implementation",
     "homepage": "https://bell-sw.com/java",
-    "version": "17.0.14-10",
+    "version": "21.0.6-10",
     "license": "GPL-2.0-only WITH Classpath-exception-2.0",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/bell-sw/Liberica/releases/download/17.0.14%2B10/bellsoft-jdk17.0.14%2B10-windows-amd64-full.zip",
-            "hash": "sha1:275f62045d63507513a22f4b22f070d63170efa5"
+            "url": "https://github.com/bell-sw/Liberica/releases/download/21.0.6%2B10/bellsoft-jdk21.0.6%2B10-windows-amd64-full.zip",
+            "hash": "sha1:8cb37ad3382bf12973b4ffb4e14f70a4469a1411"
         },
         "32bit": {
-            "url": "https://github.com/bell-sw/Liberica/releases/download/17.0.14%2B10/bellsoft-jdk17.0.14%2B10-windows-i586-full.zip",
-            "hash": "sha1:09f6f65336946ac6742cf93cb95de740b4b3c20d"
+            "url": "https://github.com/bell-sw/Liberica/releases/download/21.0.6%2B10/bellsoft-jdk21.0.6%2B10-windows-i586-full.zip",
+            "hash": "sha1:f44a89527461063c735bb6ed0d661301ad26f6d7"
         }
     },
-    "extract_dir": "jdk-17.0.14-full",
+    "extract_dir": "jdk-21.0.6-full",
     "env_add_path": "bin",
     "env_set": {
         "JAVA_HOME": "$dir"
     },
     "checkver": {
-        "url": "https://api.bell-sw.com/v1/liberica/releases?version-feature=17&bundle-type=jdk-full&version-modifier=latest&release-type=all&os=windows&arch=x86&installation-type=archive&package-type=zip&output=json&fields=version",
+        "url": "https://api.bell-sw.com/v1/liberica/releases?version-feature=21&bundle-type=jdk-full&version-modifier=latest&release-type=all&os=windows&arch=x86&installation-type=archive&package-type=zip&output=json&fields=version",
         "jsonpath": "$..version",
         "regex": "(?<major>[\\d.]+)(?:\\+)(?<build>[\\d]+)",
         "replace": "${major}-${build}"

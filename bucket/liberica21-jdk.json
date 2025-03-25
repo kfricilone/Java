@@ -1,27 +1,27 @@
 {
-    "description": "BellSoft Liberica is a 100% open-source Java 8 implementation",
+    "description": "BellSoft Liberica is a 100% open-source Java implementation",
     "homepage": "https://bell-sw.com/java",
-    "version": "8u442-7",
+    "version": "21.0.6-10",
     "license": "GPL-2.0-only WITH Classpath-exception-2.0",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/bell-sw/Liberica/releases/download/8u442%2B7/bellsoft-jdk8u442%2B7-windows-amd64.zip",
-            "hash": "sha1:1b006ce558fcb5520c1cf4c2d604cc1ddd10510e"
+            "url": "https://github.com/bell-sw/Liberica/releases/download/21.0.6%2B10/bellsoft-jdk21.0.6%2B10-windows-amd64.zip",
+            "hash": "sha1:6ed3a51fc44347ea3186b19ff725ad801b3ef862"
         },
         "32bit": {
-            "url": "https://github.com/bell-sw/Liberica/releases/download/8u442%2B7/bellsoft-jdk8u442%2B7-windows-i586.zip",
-            "hash": "sha1:09c5af00c06691416135f7b8da56429a08de3838"
+            "url": "https://github.com/bell-sw/Liberica/releases/download/21.0.6%2B10/bellsoft-jdk21.0.6%2B10-windows-i586.zip",
+            "hash": "sha1:45a96933369c412b5a66ec94175c118fa6895808"
         }
     },
-    "extract_dir": "jdk8u442",
+    "extract_dir": "jdk-21.0.6",
     "env_add_path": "bin",
     "env_set": {
         "JAVA_HOME": "$dir"
     },
     "checkver": {
-        "url": "https://api.bell-sw.com/v1/liberica/releases?version-feature=8&bundle-type=jdk&version-modifier=latest&release-type=all&os=windows&arch=x86&installation-type=archive&package-type=zip&output=json&fields=version",
+        "url": "https://api.bell-sw.com/v1/liberica/releases?version-feature=21&bundle-type=jdk&version-modifier=latest&release-type=all&os=windows&arch=x86&installation-type=archive&package-type=zip&output=json&fields=version",
         "jsonpath": "$..version",
-        "regex": "(?<major>[\\du]+)(?:\\+)(?<build>[\\d]+)",
+        "regex": "(?<major>[\\d.]+)(?:\\+)(?<build>[\\d]+)",
         "replace": "${major}-${build}"
     },
     "autoupdate": {
@@ -37,6 +37,6 @@
             "url": "https://api.bell-sw.com/v1/liberica/releases/$basename",
             "jsonpath": "$.sha1"
         },
-        "extract_dir": "jdk$matchMajor"
+        "extract_dir": "jdk-$matchMajor"
     }
 }

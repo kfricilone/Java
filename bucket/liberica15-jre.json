@@ -12,5 +12,10 @@
             "url": "https://github.com/bell-sw/Liberica/releases/download/15.0.2%2B10/bellsoft-jre15.0.2%2B10-windows-i586.zip",
             "hash": "sha1:665435a84aa56df46e704af01e6dd7b63721bfc4"
         }
+    },
+    "extract_dir": "jre-15.0.2",
+    "env_add_path": "bin",
+    "env_set": {
+        "JAVA_HOME": "$dir"
     }
 }

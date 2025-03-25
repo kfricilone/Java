@@ -7,10 +7,6 @@
         "64bit": {
             "url": "https://github.com/bell-sw/Liberica/releases/download/21.0.6%2B10/bellsoft-jdk21.0.6%2B10-windows-amd64-full.zip",
             "hash": "sha1:8cb37ad3382bf12973b4ffb4e14f70a4469a1411"
-        },
-        "32bit": {
-            "url": "https://github.com/bell-sw/Liberica/releases/download/21.0.6%2B10/bellsoft-jdk21.0.6%2B10-windows-i586-full.zip",
-            "hash": "sha1:f44a89527461063c735bb6ed0d661301ad26f6d7"
         }
     },
     "extract_dir": "jdk-21.0.6-full",
@@ -19,8 +15,8 @@
         "JAVA_HOME": "$dir"
     },
     "checkver": {
-        "url": "https://api.bell-sw.com/v1/liberica/releases?bundle-type=jdk-full&version-modifier=latest&release-type=all&os=windows&arch=x86&installation-type=archive&package-type=zip&output=json&fields=version",
-        "jsonpath": "$.version",
+        "url": "https://api.bell-sw.com/v1/liberica/releases?version-modifier=latest&bitness=64&os=windows&arch=x86&installation-type=archive&package-type=zip&bundle-type=jdk-full&fields=version",
+        "jsonpath": "$..version",
         "regex": "(?<major>[\\d.]+)(?:\\+)(?<build>[\\d]+)",
         "replace": "${major}-${build}"
     },
@@ -28,9 +24,6 @@
         "architecture": {
             "64bit": {
                 "url": "https://github.com/bell-sw/Liberica/releases/download/$matchMajor%2B$matchBuild/bellsoft-jdk$matchMajor%2B$matchBuild-windows-amd64-full.zip"
-            },
-            "32bit": {
-                "url": "https://github.com/bell-sw/Liberica/releases/download/$matchMajor%2B$matchBuild/bellsoft-jdk$matchMajor%2B$matchBuild-windows-i586-full.zip"
             }
         },
         "hash": {
