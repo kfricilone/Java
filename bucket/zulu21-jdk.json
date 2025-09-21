@@ -1,5 +1,5 @@
 {
-    "description": "Zulu is certified build of OpenJDK",
+    "description": "Zulu 21 is certified build of OpenJDK 21",
     "homepage": "https://www.azul.com/products/zulu-community/",
     "version": "21.44.17",
     "license": {

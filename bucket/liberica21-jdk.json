@@ -1,5 +1,5 @@
 {
-    "description": "BellSoft Liberica is a 100% open-source Java implementation",
+    "description": "BellSoft Liberica is a 100% open-source Java 21 implementation",
     "homepage": "https://bell-sw.com/java",
     "version": "21.0.8-12",
     "license": "GPL-2.0-only WITH Classpath-exception-2.0",
